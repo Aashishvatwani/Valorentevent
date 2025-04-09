@@ -1,5 +1,5 @@
 import React from 'react';
-import FrontPage from './frontpage';
+import FrontPage from './FrontPage';
 import SponsorPopup from './SponsorPopup';
 import { useState } from 'react';
 const App = () => {
