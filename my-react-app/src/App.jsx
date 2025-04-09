@@ -1,5 +1,5 @@
 import React from 'react';
-
+import FrontPage from './frontpage';
 import SponsorPopup from './SponsorPopup';
 import { useState } from 'react';
 const App = () => {
@@ -12,6 +12,7 @@ return (
         <FrontPage/>
       </div>
    
+
   </div>
  
 );
