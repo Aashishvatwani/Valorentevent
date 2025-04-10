@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
+import sponsor2 from './image2.jpg';
+import sponsor1 from './image1.jpg'; // Import your image here
 const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = {
@@ -156,17 +157,17 @@ const FrontPage = () => {
   const blogPosts = [
     {
       title: 'Valorant Competition Strategies',
-      date: 'Nov 01, 2023',
+      date: 'april 01, 2025',
       excerpt: 'Dive into the pro tips and tricks for acing your Valorant matches and outsmarting the competition.'
     },
     {
       title: 'Gear Up for Victory',
-      date: 'Oct 28, 2023',
+      date: 'april 04, 2025',
       excerpt: 'Discover the best gaming gear and settings that give top players their competitive edge.'
     },
     {
       title: 'The Rise of Competitive Gaming',
-      date: 'Oct 20, 2023',
+      date: 'march 23, 2025',
       excerpt: 'Explore the evolution of gaming competitions and the impact of esports on the industry.'
     }
   ];
@@ -267,81 +268,122 @@ const FrontPage = () => {
 
       {/* Sponsors, Tech Partner & Prize Pool Section */}
       <section className="sponsors-section relative min-h-screen flex flex-col justify-center items-center p-8">
-        <h2 className="relative z-10 text-4xl font-bold mb-10">Sponsors & Prize Pool</h2>
-        <div className="relative z-10 w-full flex flex-col items-center">
-          <div className="flex flex-col md:flex-row justify-around w-full max-w-5xl mb-8">
-            {/* Sponsor 1 */}
-            <div className="flex flex-col items-center mx-4 mb-4 md:mb-0">
-              <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-red-500 mb-2">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddEdbfY4dPeadpMvThorBq79cDZly8rLf-w&s"
-                  alt="Sponsor 1 Logo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-sm text-center text-gray-300">
-                ST. JOHN’S NATIONAL ACADEMY OF HEALTH SCIENCES
-              </p>
-            </div>
-            {/* Sponsor 2 */}
-            <div className="flex flex-col items-center mx-4 mb-4 md:mb-0">
-              <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-red-500 mb-2">
-                <img
-                  src="https://via.placeholder.com/150?text=Sponsor+2"
-                  alt="Sponsor 2 Logo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-sm text-center text-gray-300">
-                Sponsor 2 – Powering competitive tournaments.
-              </p>
-            </div>
-            {/* Sponsor 3 */}
-            <div className="flex flex-col items-center mx-4 mb-4 md:mb-0">
-              <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-red-500 mb-2">
-                <img
-                  src="https://via.placeholder.com/150?text=Sponsor+3"
-                  alt="Sponsor 3 Logo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-sm text-center text-gray-300">
-                Sponsor 3 – Elevating your game.
-              </p>
-            </div>
-            {/* Tech Partner */}
-            <div className="flex flex-col items-center mx-4">
-              <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-red-500 mb-2">
-                <img
-                  src="https://github.com/QuadropicHQ/web-assets/blob/main/quadropicdotcom-images/full_res_squircle_logo.png?raw=true"
-                  alt="Tech Partner Logo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-sm text-center text-gray-300">
-                Tech Partner – Quadropic by Mohammad Kamran
-              </p>
-            </div>
-          </div>
-          <div className="relative z-10">
-            <div className="bg-gradient-to-r from-red-700 to-gray-800 px-8 py-6 rounded-2xl shadow-2xl relative overflow-hidden">
-              <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute w-2 h-2 rounded-full bg-gray-400 opacity-50 animate-pulse" style={{ top: "10%", left: "20%", animationDelay: "0.5s", animationDuration: "2s", }}></div>
-                <div className="absolute w-1 h-1 rounded-full bg-gray-500 opacity-60 animate-bounce" style={{ top: "60%", right: "15%", animationDelay: "1s", animationDuration: "1.5s", }}></div>
-                <div className="absolute w-3 h-3 rounded-full bg-gray-300 opacity-40 animate-ping" style={{ bottom: "10%", left: "40%", animationDelay: "0.8s", animationDuration: "2.5s", }}></div>
-                <div className="absolute w-1.5 h-1.5 rounded-full bg-gray-600 opacity-70 animate-bounce" style={{ top: "30%", right: "45%", animationDelay: "1.2s", animationDuration: "1.8s", }}></div>
-              </div>
-              <div className="flex text-align-centre relative z-20">
-                <p className="text-sm font-semibold text-gray-300  uppercase tracking-wide">Price pool <br />Up to</p>
-                <p className="text-5xl font-extrabold text-white drop-shadow-lg">₹8500</p>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent pointer-events-none"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-800/20 via-transparent to-transparent pointer-events-none"></div>
-              <div className="absolute inset-0 rounded-2xl pointer-events-none">
-                <div className="absolute inset-0 border-2 border-red-600 rounded-2xl blur-lg opacity-20"></div>
-              </div>
-            </div>
-          </div>
+  <h2 className="relative z-10 text-4xl font-bold mb-10 text-center">Sponsors & Prize Pool</h2>
+  <div className="relative z-10 w-full flex flex-col items-center">
+    <div className="flex flex-col md:flex-row justify-around w-full max-w-5xl mb-10">
+      {/* Sponsor 1 */}
+      <motion.div
+        className="flex flex-col items-center mx-4 mb-4 md:mb-0"
+        whileHover={{ scale: 1.1, rotate: 0 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+        onClick={() => window.location.href = 'https://www.stjohns.in/'}
+      >
+        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2">
+          <img
+            src={sponsor1}
+            alt="Sponsor 1 Logo"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <p className="text-sm text-center text-gray-300">
+          ST. JOHN’S NATIONAL ACADEMY OF HEALTH SCIENCES
+        </p>
+      </motion.div>
+      {/* Sponsor 2 */}
+      <motion.div
+        className="flex flex-col items-center mx-4 mb-4 md:mb-0"
+        whileHover={{ scale: 1.1, rotate: 0 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+        onClick={() => window.location.href = 'https://forms.gle/RydVsfc4yUeqqwLY8'}
+      >
+        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2">
+          <img
+            src={sponsor2}
+            alt="./image2.jpg"
+            className="w-full h-full object-cover"
+            
+          />
+        </div>
+        <p className="text-sm text-center text-gray-300">
+          NOTE IN DIARY:Empowering Inner Growth Through Psychology  
+        </p>
+      </motion.div>
+      {/* Sponsor 3 */}
+      <motion.div
+        className="flex flex-col items-center mx-4 mb-4 md:mb-0"
+        whileHover={{ scale: 1.1, rotate: 0 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+      >
+        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2">
+          <img
+            src="https://via.placeholder.com/150?text=Sponsor+3"
+            alt="Sponsor 3 Logo"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <p className="text-sm text-center text-gray-300">
+          Sponsor 3 – Elevating your game.
+        </p>
+      </motion.div>
+      {/* Tech Partner */}
+      <motion.div
+        className="flex flex-col items-center mx-4 mb-4 md:mb-0"
+        whileHover={{ scale: 1.1, rotate: 0 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+        onClick={() => window.location.href = 'http://quadropic.com'}
+      >
+        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2">
+          <img
+            src="https://github.com/QuadropicHQ/web-assets/blob/main/quadropicdotcom-images/full_res_squircle_logo.png?raw=true"
+            alt="Tech Partner Logo"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <p className="text-sm text-center text-gray-300">
+          Tech Partner – Making Gents to Accelerate work
+        </p>
+      </motion.div>
+    </div>
+ 
+
+    <div className="relative z-10">
+  <div className="bg-gradient-to-r from-red-700 to-gray-800 px-8 py-6 rounded-2xl shadow-2xl relative overflow-hidden">
+    <div className="absolute inset-0 pointer-events-none">
+      <div
+        className="absolute w-2 h-2 rounded-full bg-gray-400 opacity-50 animate-pulse"
+        style={{ top: "10%", left: "20%", animationDelay: "0.5s", animationDuration: "2s" }}
+      ></div>
+      <div
+        className="absolute w-1 h-1 rounded-full bg-gray-500 opacity-60 animate-bounce"
+        style={{ top: "60%", right: "15%", animationDelay: "1s", animationDuration: "1.5s" }}
+      ></div>
+      <div
+        className="absolute w-3 h-3 rounded-full bg-gray-300 opacity-40 animate-ping"
+        style={{ bottom: "10%", left: "40%", animationDelay: "0.8s", animationDuration: "2.5s" }}
+      ></div>
+      <div
+        className="absolute w-1.5 h-1.5 rounded-full bg-gray-600 opacity-70 animate-bounce"
+        style={{ top: "30%", right: "45%", animationDelay: "1.2s", animationDuration: "1.8s" }}
+      ></div>
+    </div>
+    <div className="flex text-align-centre relative z-20">
+      <p className="text-sm font-semibold text-gray-300 uppercase tracking-wide">
+        Price pool <br />
+        Up to
+      </p>
+      <p className="text-5xl font-extrabold text-white drop-shadow-lg">₹8500</p>
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent pointer-events-none"></div>
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-800/20 via-transparent to-transparent pointer-events-none"></div>
+    <div className="absolute inset-0 rounded-2xl pointer-events-none">
+      <div className="absolute inset-0 border-2 border-red-600 rounded-2xl blur-lg opacity-20"></div>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
@@ -394,14 +436,16 @@ const FrontPage = () => {
 
       {/* Footer */}
       <footer className="relative z-10 bg-gray-900 p-8 text-center">
-        <p className="text-gray-400">
-          &copy; {new Date().getFullYear()} Valorant Tournament. All rights reserved.
-        </p>
-        <br/>
-        <p className="text-gray-400">
-         Aashish Vatwani-8690243735 | Hemanth CS-8867197294
-        </p>
-      </footer>
+  <p className="text-gray-400">
+    &copy; {new Date().getFullYear()} Valorant Tournament. All rights reserved.
+  </p>
+  <br />
+  <p className="text-gray-400">
+    Aashish Watwani - <a href="tel:+918690243735" className="text-blue-400  hover:text-blue-300">+91 86902 43735</a> | 
+    Hemanth CS - <a href="tel:+918867197294" className="text-blue-400  hover:text-blue-300">+91 88671 97294</a>
+  </p>
+</footer>
+
     </div>
   );
 };

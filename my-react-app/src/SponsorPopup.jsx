@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import sponsor2 from './image2.jpg'; // Make sure the path is correct
 
-// 🖼️ Sponsor data
 const sponsors = [
   {
-    name: 'Startup Alpha',
-    description: 'AI-powered tools transforming business automation.',
-    logo: 'https://via.placeholder.com/64?text=A',
-    url: 'https://startup-alpha.com',
+    name: 'Quadropic',
+    description: 'We create the best Agents to automate the work.',
+    logo: 'https://github.com/QuadropicHQ/web-assets/blob/main/quadropicdotcom-images/full_res_squircle_logo.png?raw=true',
+    url: 'http://quadropic.com',
   },
   {
-    name: 'BetaTech',
-    description: 'Empowering communities with affordable tech solutions.',
-    logo: 'https://via.placeholder.com/64?text=B',
-    url: 'https://betatech.io',
+    name: 'Note in Diary',
+    description: 'Empowering Inner Growth Through Psychology and Self-Discovery.',
+    logo: sponsor2, // ✅ CORRECTED this line
+    url: 'https://www.instagram.com/noteindiary?igsh=cXc1NjB6YndzN29k',
   },
   {
     name: 'GammaGo',
@@ -55,13 +55,19 @@ const SponsorPopupCarousel = ({ onClose }) => {
   return (
     <div className="fixed bottom-5 left-5 z-50">
       <div
-        className={`transition-all duration-500 transform ${
+        onClick={handleRedirect}
+        className={`transition-all duration-500 transform cursor-pointer ${
           visible ? 'translate-x-0 opacity-100 animate-bounce' : '-translate-x-20 opacity-0'
-        } bg-white border shadow-lg rounded-xl p-4 w-80 relative`}
+        } bg-gradient-to-br from-gray-900 via-red-900 to-black border border-red-800 shadow-2xl rounded-xl 
+          p-4 sm:p-3 w-80 sm:w-64 xs:w-56 relative text-white`}
+        
       >
         <button
-          onClick={onClose}
-          className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl"
+          onClick={(e) => {
+            e.stopPropagation(); // Prevent redirect on close click
+            onClose();
+          }}
+          className="absolute top-2 right-2 text-white hover:text-red-300 text-xl font-bold"
         >
           &times;
         </button>
@@ -69,18 +75,12 @@ const SponsorPopupCarousel = ({ onClose }) => {
         <img
           src={sponsor.logo}
           alt={`${sponsor.name} logo`}
-          className="w-16 h-16 mx-auto mb-3 object-contain"
+          className="w-24 h-24 mx-auto mb-3 object-cover rounded-full border-2 border-red-500"
+
         />
 
-        <h2 className="text-lg font-semibold mb-2 text-center">🚀 {sponsor.name}</h2>
-        <p className="text-sm text-gray-600 mb-4 text-center">{sponsor.description}</p>
-
-        <button
-          onClick={handleRedirect}
-          className="bg-blue-600 text-white py-1.5 px-4 rounded hover:bg-blue-700 text-sm block mx-auto"
-        >
-          Visit Sponsor
-        </button>
+        <h2 className="text-lg font-semibold mb-2 text-center">{sponsor.name}</h2>
+        <p className="text-sm text-gray-200 text-center">{sponsor.description}</p>
       </div>
     </div>
   );
