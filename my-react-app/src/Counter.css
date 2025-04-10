@@ -1,0 +1,44 @@
+.counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #ff0000, #000000);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+    text-align: center;
+    z-index: 1000;
+    letter-spacing: 1px;
+    animation: pulse 2.5s infinite;
+    backdrop-filter: blur(2px);
+  }
+  
+  .counter-title {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  
+  .counter-time {
+    font-size: 15px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+    }
+  }
+  

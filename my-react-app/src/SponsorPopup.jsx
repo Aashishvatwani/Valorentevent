@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import sponsor2 from './image2.jpg'; // Make sure the path is correct
+import sponsor2 from './image2.jpg'; // Ensure the path is correct
 
 const sponsors = [
   {
@@ -11,7 +11,7 @@ const sponsors = [
   {
     name: 'Note in Diary',
     description: 'Empowering Inner Growth Through Psychology and Self-Discovery.',
-    logo: sponsor2, // ✅ CORRECTED this line
+    logo: sponsor2,
     url: 'https://www.instagram.com/noteindiary?igsh=cXc1NjB6YndzN29k',
   },
   {
@@ -53,14 +53,14 @@ const SponsorPopupCarousel = ({ onClose }) => {
   const sponsor = sponsors[currentIndex];
 
   return (
-    <div className="fixed bottom-5 left-5 z-50">
+    <div className="fixed bottom-3 left-3 sm:bottom-5 sm:left-5 z-50">
       <div
         onClick={handleRedirect}
         className={`transition-all duration-500 transform cursor-pointer ${
           visible ? 'translate-x-0 opacity-100 animate-bounce' : '-translate-x-20 opacity-0'
-        } bg-gradient-to-br from-gray-900 via-red-900 to-black border border-red-800 shadow-2xl rounded-xl 
-          p-4 sm:p-3 w-80 sm:w-64 xs:w-56 relative text-white`}
-        
+        } 
+        bg-gradient-to-br from-gray-900 via-red-900 to-black border border-red-800 shadow-2xl rounded-xl 
+        p-3 sm:p-4 w-[16rem] sm:w-[18rem] md:w-[20rem] lg:w-80 relative text-white max-w-[90vw]`}
       >
         <button
           onClick={(e) => {
@@ -75,12 +75,11 @@ const SponsorPopupCarousel = ({ onClose }) => {
         <img
           src={sponsor.logo}
           alt={`${sponsor.name} logo`}
-          className="w-24 h-24 mx-auto mb-3 object-cover rounded-full border-2 border-red-500"
-
+          className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 object-cover rounded-full border-2 border-red-500"
         />
 
-        <h2 className="text-lg font-semibold mb-2 text-center">{sponsor.name}</h2>
-        <p className="text-sm text-gray-200 text-center">{sponsor.description}</p>
+        <h2 className="text-base sm:text-lg font-semibold mb-2 text-center">{sponsor.name}</h2>
+        <p className="text-xs sm:text-sm text-gray-200 text-center">{sponsor.description}</p>
       </div>
     </div>
   );

@@ -344,7 +344,7 @@ const FrontPage = () => {
           />
         </div>
         <p className="text-sm text-center text-gray-300">
-          Tech Partner – Making Gents to Accelerate work
+          Tech Partner – Quadropic Making AI Agents to accelerate your work
         </p>
       </motion.div>
     </div>
