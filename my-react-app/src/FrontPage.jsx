@@ -443,7 +443,7 @@ const FrontPage = () => {
   </p>
   <br />
   <p className="text-gray-400">
-    Aashish Watwani - <a href="tel:+918690243735" className="text-blue-400  hover:text-blue-300">+91 86902 43735</a> | 
+    Aashish Vatwani - <a href="tel:+918690243735" className="text-blue-400  hover:text-blue-300">+91 86902 43735</a> | 
     Hemanth CS - <a href="tel:+918867197294" className="text-blue-400  hover:text-blue-300">+91 88671 97294</a>
   </p>
 </footer>
