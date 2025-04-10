@@ -3,6 +3,7 @@ import FrontPage from './FrontPage';
 import SponsorPopup from './SponsorPopup';
 import { useState } from 'react';
 import Counter from './Counter';
+import { Analytics } from "@vercel/analytics/react"
 const App = () => {
   const [showPopup, setShowPopup] = useState(true); 
 return (
@@ -11,6 +12,7 @@ return (
     <div >
        <Counter/>
         <FrontPage/>
+        <Analytics />
       </div>
    
 
