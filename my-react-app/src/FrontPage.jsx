@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import sponsor2 from './image2.jpg';
 import sponsor1 from './image1.jpg'; // Import your image here
+import sponsor3 from './image3.png'; // Import your image here
 const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = {
@@ -259,7 +260,7 @@ const FrontPage = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Valorant Gaming Tournament</h1>
           <p className="text-xl mb-6 text-red-400">{heroText}</p>
           <button className="bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-lg transition-colors duration-300 text-lg" onClick={() => window.location.href = 'https://unstop.com/o/UwJd7oC?lb=IvQC7gxN'}>
-            Join the Battle
+            Register for Battle
           </button>
           <div className="image-slider mt-8">
           </div>
@@ -316,16 +317,17 @@ const FrontPage = () => {
         whileHover={{ scale: 1.1, rotate: 0 }}
         whileTap={{ scale: 0.95 }}
         transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+        onClick={() => window.location.href = 'https://cptorus.in/'}
       >
         <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2">
           <img
-            src="https://via.placeholder.com/150?text=Sponsor+3"
+            src={ sponsor3 }
             alt="Sponsor 3 Logo"
             className="w-full h-full object-cover"
           />
         </div>
         <p className="text-sm text-center text-gray-300">
-          Sponsor 3 – Elevating your game.
+        Torus Solution – Computer Paradise Torus Solutions
         </p>
       </motion.div>
       {/* Tech Partner */}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import sponsor2 from './image2.jpg'; // Ensure the path is correct
-
+import sponsor3 from './image3.png'; // Ensure the path is correct
 const sponsors = [
   {
     name: 'Quadropic',
@@ -15,10 +15,10 @@ const sponsors = [
     url: 'https://www.instagram.com/noteindiary?igsh=cXc1NjB6YndzN29k',
   },
   {
-    name: 'GammaGo',
-    description: 'Innovating logistics with smart tracking.',
-    logo: 'https://via.placeholder.com/64?text=G',
-    url: 'https://gammago.com',
+    name: 'Torus Solution',
+    description: 'Binding to Software Commitments',
+    logo: sponsor3,
+    url: 'https://cptorus.in/',
   },
 ];
 
