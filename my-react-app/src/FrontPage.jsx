@@ -260,7 +260,12 @@ const FrontPage = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Valorant Gaming Tournament</h1>
           <p className="text-xl mb-6 text-red-400">{heroText}</p>
           <button className="bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-lg transition-colors duration-300 text-lg" onClick={() => window.location.href = 'https://unstop.com/o/UwJd7oC?lb=IvQC7gxN'}>
-            Register for Battle
+            Register through Unstop
+          </button>
+          <br />
+          <br />
+          <button className="bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-lg transition-colors duration-300 text-lg" onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSengnOhtCa0gth_ip0HdeZCGVCzcrKqJWd4WzmIR4jTCP9aNA/viewform?usp=header'}>
+            Register through Google Form
           </button>
           <div className="image-slider mt-8">
           </div>
